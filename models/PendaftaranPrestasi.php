@@ -50,15 +50,20 @@ class PendaftaranPrestasi extends Pendaftaran
     }
 
     // ---------------------------------------------------------
-    // Implementasi Abstract Method (Tahap 5)
+    // Override: hitungTotalBiaya() — Tahap 5 (Polimorfisme)
+    // Prestasi = Biaya Pendaftaran Dasar - Rp 50.000
+    // (Mendapat potongan apresiasi prestasi)
     // ---------------------------------------------------------
     public function hitungTotalBiaya()
     {
-        // TODO: Akan diimplementasikan di Tahap 5
+        return $this->biayaPendaftaranDasar - 50000;
     }
 
+    // ---------------------------------------------------------
+    // Override: tampilkanInfoJalur() — Tahap 5 (Polimorfisme)
+    // ---------------------------------------------------------
     public function tampilkanInfoJalur()
     {
-        // TODO: Akan diimplementasikan di Tahap 5
+        return "Jalur Prestasi | Jenis: {$this->jenisPrestasi} | Tingkat: {$this->tingkatPrestasi}";
     }
 }

@@ -50,15 +50,20 @@ class PendaftaranKedinasan extends Pendaftaran
     }
 
     // ---------------------------------------------------------
-    // Implementasi Abstract Method (Tahap 5)
+    // Override: hitungTotalBiaya() — Tahap 5 (Polimorfisme)
+    // Kedinasan = Biaya Pendaftaran Dasar + (25% dari Biaya Dasar)
+    // (Dikenakan surcharge administrasi khusus instansi)
     // ---------------------------------------------------------
     public function hitungTotalBiaya()
     {
-        // TODO: Akan diimplementasikan di Tahap 5
+        return $this->biayaPendaftaranDasar + ($this->biayaPendaftaranDasar * 0.25);
     }
 
+    // ---------------------------------------------------------
+    // Override: tampilkanInfoJalur() — Tahap 5 (Polimorfisme)
+    // ---------------------------------------------------------
     public function tampilkanInfoJalur()
     {
-        // TODO: Akan diimplementasikan di Tahap 5
+        return "Jalur Kedinasan | SK: {$this->skIkatanDinas} | Instansi: {$this->instansiSponsor}";
     }
 }

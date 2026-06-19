@@ -50,15 +50,20 @@ class PendaftaranReguler extends Pendaftaran
     }
 
     // ---------------------------------------------------------
-    // Implementasi Abstract Method (Tahap 5)
+    // Override: hitungTotalBiaya() — Tahap 5 (Polimorfisme)
+    // Reguler = Biaya Pendaftaran Dasar (tarif standar murni
+    // tanpa biaya tambahan/potongan)
     // ---------------------------------------------------------
     public function hitungTotalBiaya()
     {
-        // TODO: Akan diimplementasikan di Tahap 5
+        return $this->biayaPendaftaranDasar;
     }
 
+    // ---------------------------------------------------------
+    // Override: tampilkanInfoJalur() — Tahap 5 (Polimorfisme)
+    // ---------------------------------------------------------
     public function tampilkanInfoJalur()
     {
-        // TODO: Akan diimplementasikan di Tahap 5
+        return "Jalur Reguler | Prodi: {$this->pilihanProdi} | Kampus: {$this->lokasiKampus}";
     }
 }
